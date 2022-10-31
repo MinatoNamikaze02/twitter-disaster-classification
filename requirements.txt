@@ -1,0 +1,11 @@
+fastapi==0.81.0
+loguru==0.6.0
+python-dotenv==0.20.0
+pydantic==1.10.1
+tweepy==4.10.1
+uvicorn==0.18.3
+
+# model requirements
+nltk==3.7
+pandas==1.4.3
+sklearn==1.1.2
