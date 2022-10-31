@@ -5,6 +5,7 @@ import uvicorn
 from fastapi import Depends, FastAPI, HTTPException
 from fastapi import status as http_status
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import HTMLResponse
 from fastapi.security import HTTPBearer
 
 import schemas
@@ -35,9 +36,11 @@ app.add_middleware(
 )
 
 
-@app.get("/")
+@app.get("/", response_class=HTMLResponse)
 async def status():
-    return {"status": "OK"}
+    with open('./client/index.html') as f:
+        data = f.read()
+    return HTMLResponse(content=data, media_type="text/html")
 
 
 @app.get("/tweets", response_model=List[schemas.TweetData])
