@@ -23,11 +23,11 @@ An application that scrapes tweets off of Twitter based on given tags and uses a
 - Run the client manually and interact with the application there.
 
 ## Hooks
-- pre-commit is used to run black, autoflake and isort before every commit.
-- pre-push is used to run pytest before every push.
-- Note: These hooks do not work by default. Firstly, you need to add these hooks to git by running git config core.hooksPath hooks in the root directory of the project.
-- Then, you need to install the dependencies for these hooks by running pip install -r test-requirements.txt (if you haven't already).
-- You also would need to give execute permissions to the hooks by running chmod +x hooks/*.
+- pre-commit is used to run `black`, `autoflake` and `isort` before every commit.
+- pre-push is used to run `pytest` before every push.
+- Note: These hooks do not work by default. Firstly, you need to add these hooks to git by running `git config core.hooksPath hooks` in the root directory            of the project.
+- Then, you need to install the dependencies for these hooks by running `pip install -r test-requirements.txt` (if you haven't already).
+- You also would need to give execute permissions to the hooks by running `chmod +x hooks/*`.
 - You can use the `--no-verify` flag to ignore the hooks.
 
 
