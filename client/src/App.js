@@ -60,7 +60,7 @@ function App() {
         </form>
       )}
       <article>
-        <p className="title-results"><b>SEARCH TAG: </b>{tweet}</p>
+        {success &&  <p className="title-results"><b>SEARCH TAG: </b>{tweet}</p>}
         {data &&
           data.map((tweet) => {
             return (
@@ -76,12 +76,13 @@ function App() {
                     <b>CREATED AT</b>: {tweet.created_at.substr(0, 10)}
                   </p>
                   <br />
+                  <p><b>Predictions: </b></p>
                   {tweet.predictions.map((prediction) => {
                     return (
                       <div className="prediction">
-                        <p><b>Predictions: </b></p>
                         <div className="tag">
                           #{prediction.label}
+                          <br/>
                         </div>
                       </div>
                     );

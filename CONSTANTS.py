@@ -1,7 +1,7 @@
 DUMP_PATH = "data"
 MAX_WORKERS = 4
 CATEGORIES_COLNAMES = [
-    "irrelavant",
+    "related",
     "request",
     "offer",
     "aid_related",
