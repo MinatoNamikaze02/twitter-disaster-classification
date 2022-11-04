@@ -1,0 +1,84 @@
+.App-header{
+    background-color: #222;
+}
+.navbar{
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.tweet-submit-section{
+    display: flex;
+    margin: 50px 0 0 0;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+}
+
+.form-outer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+}
+
+.form-outer div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-outer input{
+    width: 300px;
+    height: 30px;
+    margin: 10px 0 0 0;
+}
+
+.form-outer label{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.form-outer button{
+    margin-top: 20px;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: #222;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* center in and make grid layout for cards */
+article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tweet{
+    width: 50%;
+    margin: 50px 0 0 0;
+    height: auto;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #c9c9c9;
+    color: #000;
+    border: 1px solid #fff;
+}
+
+.tag{
+    height: auto;
+    width: fit-content;
+    padding: 5px;
+    border: 1px solid white;
+    background-color: #fff;
+}
+
+.title-results{
+    font-size: 1.5rem;
+}

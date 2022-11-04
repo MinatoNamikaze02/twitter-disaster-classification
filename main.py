@@ -36,28 +36,26 @@ app.add_middleware(
 )
 
 
-@app.get("/", response_class=HTMLResponse)
+@app.get("/")
 async def status():
-    with open('./client/index.html') as f:
-        data = f.read()
-    return HTMLResponse(content=data, media_type="text/html")
+    return {"status": "OK"}
 
 
-@app.get("/tweets", response_model=List[schemas.TweetData])
-async def get_tweets_by_tag(request: schemas.TweetRequest, token=Depends(HTTPBearer())):
+@app.post("/tweets", response_model=List[schemas.TweetData])
+async def get_tweets_by_tag(tags: str, count: str, token=Depends(HTTPBearer())):
     creds = token.credentials
     if creds != auth_token:
         raise HTTPException(
             status_code=http_status.HTTP_403_FORBIDDEN, detail="Invalid auth token"
         )
-    if request.count < 10:
+    count = int(count)
+    if count < 10:
         raise HTTPException(
             status_code=http_status.HTTP_400_BAD_REQUEST, detail="Count should be >= 10"
         )
-    results = invoke(request.tags, max_workers=MAX_WORKERS, no_of_tweets=request.count)
+    results = invoke([tags], max_workers=MAX_WORKERS, no_of_tweets=count)
     results = [*results]
     tweets = utils.predictions(results)
-
     return tweets
 
 

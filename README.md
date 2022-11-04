@@ -32,10 +32,18 @@ An application that scrapes tweets off of Twitter based on given tags and uses a
 
 
 ## Tests
+- You can run the tests by running
+  ```$ pytest --cov --cov-branch --cov-report term-missing```
 
 ## Demos
+- (I'm too lazy rn)
 
 ## Further Scope
+- First and foremost, the model needs to be trained on a      better and/or larger dataset.
+- The UI needs to be improved (I'm not a UI/UX guy).
+- Add data visualization in the client side.
+- Heatmaps (need to get location information)
+- **Please do open issues if you can think of any!**
 
 ## Bugs?
 - Feel free to open an issue/PR
