@@ -25,12 +25,14 @@ An application that scrapes tweets off of Twitter based on given tags and uses a
 ## Tests
 - You can run the tests by running
   ```$ python test_main.py```
-
+  
 ## Demos
-- (I'm too lazy rn)
+
+https://user-images.githubusercontent.com/85065053/200040681-edbe5716-9be3-4dde-9d8a-326de28b9d35.mp4
+
 
 ## Further Scope
-- First and foremost, the model needs to be trained on a      better and/or larger dataset.
+- First and foremost, the model needs to be trained on a better and/or larger dataset.
 - The UI needs to be improved (I'm not a UI/UX guy).
 - Add data visualization in the client side.
 - Heatmaps (need to get location information)
