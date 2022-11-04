@@ -3,6 +3,7 @@ import { useState } from "react";
 
 function App() {
   const [tweet, setTweet] = useState("");
+  const [count, setCount] = useState(10);
   const [success, setSuccess] = useState(false);
   const [data, setData] = useState([]);
   const handleSubmit = (event) => {
@@ -11,7 +12,7 @@ function App() {
     {
       /* fetch tweets */
     }
-    fetch(`http://localhost:80/tweets?tags=${tweet}&count=${20}`, {
+    fetch(`http://localhost:80/tweets?tags=${tweet}&count=${count}`, {
       method: "POST",
       headers: {
         Authorization: "Bearer " + "arjun",
@@ -48,6 +49,16 @@ function App() {
               placeholder="Enter tweet"
               value={tweet}
               onChange={(event) => setTweet(event.target.value)}
+            />
+            <br/>
+            <label htmlFor="tweet">Count</label>
+            <input
+              type="number"
+              className="form-control"
+              id="count"
+              placeholder="Enter count"
+              value={count}
+              onChange={(event) => setCount(event.target.value)}
             />
           </div>
           <button
