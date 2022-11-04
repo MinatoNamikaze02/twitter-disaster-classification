@@ -24,7 +24,7 @@ An application that scrapes tweets off of Twitter based on given tags and uses a
 
 ## Tests
 - You can run the tests by running
-  ```$ pytest --cov --cov-branch --cov-report term-missing```
+  ```$ python3 test_main.py```
 
 ## Demos
 - (I'm too lazy rn)
