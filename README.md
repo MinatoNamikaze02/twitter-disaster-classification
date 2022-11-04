@@ -27,7 +27,7 @@ An application that scrapes tweets off of Twitter based on given tags and uses a
   ```$ python test_main.py```
 
 ## Demos
-https://github.com/MinatoNamikaze02/twitter-disaster-classification/blob/main/assets/demo.mp4
+![demo.mp4](https://github.com/MinatoNamikaze02/twitter-disaster-classification/blob/main/assets/demo.mp4)
 
 ## Further Scope
 - First and foremost, the model needs to be trained on a      better and/or larger dataset.
