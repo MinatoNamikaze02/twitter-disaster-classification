@@ -4,7 +4,7 @@ An application that scrapes tweets off of Twitter based on given tags and uses a
 ## How to get started
 - Get yourself a Twitter Developer API key by signing up [here](https://developer.twitter.com/en).
 - Copy the contents from the `sample.env` file into a `.env` file and fill its contents.
-- The `AUTH_TOKEN` can be anything. It is used for validation purposes.
+- The `AUTH_TOKEN` can be anything (your own name if you're a narcissist). It is used for validation purposes.
 
 ## Dependencies
 - Download all the dependencies by running 
@@ -22,15 +22,6 @@ An application that scrapes tweets off of Twitter based on given tags and uses a
 ## Client
 - Run the client manually and interact with the application there.
 
-## Hooks
-- pre-commit is used to run `black`, `autoflake` and `isort` before every commit.
-- pre-push is used to run `pytest` before every push.
-- Note: These hooks do not work by default. Firstly, you need to add these hooks to git by running `git config core.hooksPath hooks` in the root directory            of the project.
-- Then, you need to install the dependencies for these hooks by running `pip install -r test-requirements.txt` (if you haven't already).
-- You also would need to give execute permissions to the hooks by running `chmod +x hooks/*`.
-- You can use the `--no-verify` flag to ignore the hooks.
-
-
 ## Tests
 - You can run the tests by running
   ```$ pytest --cov --cov-branch --cov-report term-missing```
@@ -46,4 +37,4 @@ An application that scrapes tweets off of Twitter based on given tags and uses a
 - **Please do open issues if you can think of any!**
 
 ## Bugs?
-- Feel free to open an issue/PR
+- Feel free to open an issue.
