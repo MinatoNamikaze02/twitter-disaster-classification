@@ -30,6 +30,13 @@ function App() {
       });
   };
 
+  const handleReset = () => {
+    setTweet("");
+    setCount(10);
+    setSuccess(false);
+    setData([]);
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -71,7 +78,12 @@ function App() {
         </form>
       )}
       <article>
-        {success &&  <p className="title-results"><b>SEARCH TAG: </b>{tweet}</p>}
+        {success &&  (
+        <div className="title-reset">
+           <p className="title-results"><b>SEARCH TAG: </b>{tweet}</p>
+           <button className="btn btn-primary" onClick={handleReset}>RESET</button>
+        </div>
+        )}
         {data &&
           data.map((tweet) => {
             return (

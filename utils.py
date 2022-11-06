@@ -40,20 +40,23 @@ def predictions(results) -> list:
     loaded_model = pickle.load(open("./disaster_model.sav", "rb"))
     tweets = []
     for res in results:
-        for tweet in res:
-            try:
-                if tweet:
-                    final_tweet = schemas.TweetData(**tweet)
-                    predictions = loaded_model.predict([final_tweet.text])
-                    final_tweet.predictions = []
-                    categories = return_categories(predictions=predictions)
-                    for category in categories:
-                        final_tweet.predictions.append(
-                            schemas.PredictedLabels(label=category)
-                        )
-                    tweets.append(final_tweet)
-            except Exception as e:
-                logger.error(e)
+        try:
+            for tweet in res:
+                try:
+                    if tweet:
+                        final_tweet = schemas.TweetData(**tweet)
+                        predictions = loaded_model.predict([final_tweet.text])
+                        final_tweet.predictions = []
+                        categories = return_categories(predictions=predictions)
+                        for category in categories:
+                            final_tweet.predictions.append(
+                                schemas.PredictedLabels(label=category)
+                            )
+                        tweets.append(final_tweet)
+                except Exception as e:
+                    logger.error(e)
+        except Exception as e:
+            logger.error(e)
     return tweets
 
 
@@ -62,5 +65,6 @@ def return_categories(predictions) -> list:
     for i in range(len(predictions[0])):
         if predictions[0][i] == 1:
             categories.append(CATEGORIES_COLNAMES[i])
-
+    if len(categories) == 1 and categories[0] == "related":
+        categories = ["irrelavant"]
     return categories
