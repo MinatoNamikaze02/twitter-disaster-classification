@@ -28,8 +28,7 @@ An application that scrapes tweets off of Twitter based on given tags and uses a
   
 ## Demos
 
-
-https://user-images.githubusercontent.com/85065053/200166973-b873631d-c99c-4067-aa28-1ca1cb45c306.mov
+https://user-images.githubusercontent.com/85065053/200167204-eef0cae8-b196-49f6-82b2-e7f13e274b58.mov
 
 
 ## Further Scope
