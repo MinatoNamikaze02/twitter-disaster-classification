@@ -4,7 +4,7 @@ An application that scrapes tweets off of Twitter based on given tags and uses a
 ## How to get started
 - Get yourself a Twitter Developer API key by signing up [here](https://developer.twitter.com/en).
 - Copy the contents from the `sample.env` file into a `.env` file and fill its contents.
-- The `AUTH_TOKEN` can be anything (your own name if you're a narcissist). It is used for validation purposes.
+- The `AUTH_TOKEN` can be anything. It is used for validation purposes.
 
 ## Dependencies
 - Download all the dependencies by running 
