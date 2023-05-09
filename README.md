@@ -33,7 +33,7 @@ https://user-images.githubusercontent.com/85065053/200167204-eef0cae8-b196-49f6-
 
 ## Further Scope
 - First and foremost, the model needs to be trained on a better and/or larger dataset.
-- The UI needs to be improved (I'm not a UI/UX guy).
+- The UI needs to be improved.
 - Add data visualization in the client side.
 - Heatmaps (need to get location information).
 - Get more useful information out of the scraping process (will work on this).
